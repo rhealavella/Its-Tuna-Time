@@ -1,0 +1,158 @@
+body {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  background-color: #f4efeb;
+}
+#displayed-cities {
+  background-color: white;
+  margin-top: 30px;
+  border-radius: 15px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 7px 7px 7px rgba(57, 57, 57, 0.2);
+  color: #f4efeb;
+}
+
+h1 {
+  text-align: center;
+  padding-bottom: 20px;
+  color: #063049;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 40px;
+}
+footer {
+  text-align: center;
+  color: #063049;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 15px;
+  padding: 20px;
+}
+
+#toronto {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #e7703b;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#calgary {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #ecbba7;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#halifax {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #c5b5d3;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#rome {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #a4cd99;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+#tokyo {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #94abcc;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+#calgary-date {
+  font-size: small;
+  font-weight: normal;
+}
+#toronto-date {
+  font-size: small;
+  font-weight: normal;
+}
+#halifax-date {
+  font-size: small;
+  font-weight: normal;
+}
+#rome-date {
+  font-size: small;
+  font-weight: normal;
+}
+#tokyo-date {
+  font-size: small;
+  font-weight: normal;
+}
+
+#calgary-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #ecbba7;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#toronto-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #e7703b;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#halifax-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #c5b5d3;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#rome-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #a4cd99;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#tokyo-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #94abcc;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
