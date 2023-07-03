@@ -48,3 +48,10 @@ function updateTime() {
 
 updateTime();
 setInterval(updateTime, 1000);
+
+function calgaryCurrentWeather() {
+  let key = "e9ebt40ac8468b03ff07a7b93c22oc3b";
+  let units = "metric";
+  let query = "calgary";
+  let url = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=${units}`;
+}
