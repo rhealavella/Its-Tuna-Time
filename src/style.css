@@ -105,6 +105,27 @@ footer {
   font-weight: normal;
 }
 
+#calgary-weather {
+  font-size: small;
+  font-weight: normal;
+}
+#toronto-weather {
+  font-size: small;
+  font-weight: normal;
+}
+#halifax-weather {
+  font-size: small;
+  font-weight: normal;
+}
+#rome-weather {
+  font-size: small;
+  font-weight: normal;
+}
+#tokyo-weather {
+  font-size: small;
+  font-weight: normal;
+}
+
 #calgary-time {
   text-align: center;
   font-size: 30px;

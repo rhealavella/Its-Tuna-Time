@@ -1,0 +1,50 @@
+function updateTime() {
+  let calgaryDateElement = document.querySelector("#calgary-date");
+  calgaryDateElement.innerHTML = moment()
+    .tz("America/Edmonton")
+    .format("ddd MMM Do YYYY");
+
+  let calgaryTimeElement = document.querySelector("#calgary-time");
+  calgaryTimeElement.innerHTML = moment()
+    .tz("America/Edmonton")
+    .format("hh:mm:ss A");
+
+  let torontoDateElement = document.querySelector("#toronto-date");
+  torontoDateElement.innerHTML = moment()
+    .tz("America/Toronto")
+    .format("ddd MMM Do YYYY");
+
+  let torontoTimeElement = document.querySelector("#toronto-time");
+  torontoTimeElement.innerHTML = moment()
+    .tz("America/Toronto")
+    .format("hh:mm:ss A");
+
+  let halifaxDateElement = document.querySelector("#halifax-date");
+  halifaxDateElement.innerHTML = moment()
+    .tz("America/Halifax")
+    .format("ddd MMM Do YYYY");
+
+  let halifaxTimeElement = document.querySelector("#halifax-time");
+  halifaxTimeElement.innerHTML = moment()
+    .tz("America/Halifax")
+    .format("hh:mm:ss A");
+
+  let romeDateElement = document.querySelector("#rome-date");
+  romeDateElement.innerHTML = moment()
+    .tz("Europe/Rome")
+    .format("ddd MMM Do YYYY");
+
+  let romeTimeElement = document.querySelector("#rome-time");
+  romeTimeElement.innerHTML = moment().tz("Europe/Rome").format("hh:mm:ss A");
+
+  let tokyoDateElement = document.querySelector("#tokyo-date");
+  tokyoDateElement.innerHTML = moment()
+    .tz("Asia/Tokyo")
+    .format("ddd MMM Do YYYY");
+
+  let tokyoTimeElement = document.querySelector("#tokyo-time");
+  tokyoTimeElement.innerHTML = moment().tz("Asia/Tokyo").format("hh:mm:ss A");
+}
+
+updateTime();
+setInterval(updateTime, 1000);
