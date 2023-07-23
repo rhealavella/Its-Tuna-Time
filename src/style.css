@@ -32,6 +32,16 @@ footer {
   font-size: 15px;
   padding: 20px;
 }
+#vancouver {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #ffbc66;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 
 #toronto {
   text-align: left;
@@ -83,6 +93,10 @@ footer {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+#vancouver-date {
+  font-size: small;
+  font-weight: normal;
+}
 
 #calgary-date {
   font-size: small;
@@ -101,6 +115,10 @@ footer {
   font-weight: normal;
 }
 #tokyo-date {
+  font-size: small;
+  font-weight: normal;
+}
+#vancouver-weather {
   font-size: small;
   font-weight: normal;
 }
@@ -124,6 +142,16 @@ footer {
 #tokyo-weather {
   font-size: small;
   font-weight: normal;
+}
+#vancouver-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #ffbc66;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
 }
 
 #calgary-time {

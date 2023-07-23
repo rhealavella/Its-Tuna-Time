@@ -1,4 +1,14 @@
 function updateTime() {
+  let vancouverDateElement = document.querySelector("#vancouver-date");
+  vancouverDateElement.innerHTML = moment()
+    .tz("America/Vancouver")
+    .format("ddd MMM Do YYYY");
+
+  let vancouverTimeElement = document.querySelector("#vancouver-time");
+  vancouverTimeElement.innerHTML = moment()
+    .tz("America/Vancouver")
+    .format("hh:mm:ss A");
+
   let calgaryDateElement = document.querySelector("#calgary-date");
   calgaryDateElement.innerHTML = moment()
     .tz("America/Edmonton")
