@@ -59,9 +59,25 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-function calgaryCurrentWeather() {
+function getForecast(city) {
   let key = "e9ebt40ac8468b03ff07a7b93c22oc3b";
   let units = "metric";
-  let query = "calgary";
-  let url = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}&units=${units}`;
+  let query = city;
+  let url = `https://api.shecodes.io/weather/v1/forecast?query=${query}&key=${key}&units=${units}`;
+
+  axios.get(url).then(displayTemp);
 }
+
+function displayTemp(response) {
+  console.log(response.data);
+  let temperatureElement = document.querySelector("#calgary-temperature");
+  let iconElement = document.querySelector("#calgary-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+}
+
+let query = "calgary";
+getForecast(query);
