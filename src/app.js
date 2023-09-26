@@ -59,25 +59,23 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-function getForecast(city) {
+function getCurrentTemp(city) {
   let key = "e9ebt40ac8468b03ff07a7b93c22oc3b";
   let units = "metric";
-  let query = city;
-  let url = `https://api.shecodes.io/weather/v1/forecast?query=${query}&key=${key}&units=${units}`;
+  let query = city; // Use the parameter 'city' instead of hardcoding the city name
+  let url = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}`;
 
   axios.get(url).then(displayTemp);
 }
 
 function displayTemp(response) {
   console.log(response.data);
-  let temperatureElement = document.querySelector("#calgary-temperature");
-  let iconElement = document.querySelector("#calgary-icon");
-  iconElement.setAttribute(
-    "src",
-    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
-  );
+  let temperatureElement = document.querySelector("#vancouver-temperature");
+  let iconElement = document.querySelector("#vancouver-icon");
+  iconElement.setAttribute("src", response.data.condition.icon_url); // Corrected the string concatenation syntax
   temperatureElement.innerHTML = Math.round(response.data.temperature.current);
 }
 
-let query = "calgary";
-getForecast(query);
+let query = "";
+
+getCurrentTemp(query); // Pass the query parameter when calling the function
