@@ -76,6 +76,16 @@ footer {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
+#newfoundland {
+  text-align: left;
+  font-size: larger;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #934645;
+  border-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
 #rome {
   text-align: left;
   font-size: larger;
@@ -113,6 +123,11 @@ footer {
   font-size: small;
   font-weight: normal;
 }
+
+#newfoundland-date {
+  font-size: small;
+  font-weight: normal;
+}
 #rome-date {
   font-size: small;
   font-weight: normal;
@@ -135,6 +150,10 @@ footer {
   font-weight: normal;
 }
 #halifax-weather {
+  font-size: small;
+  font-weight: normal;
+}
+#newfoundland-weather {
   font-size: small;
   font-weight: normal;
 }
@@ -183,6 +202,17 @@ footer {
   font-weight: bold;
   padding: 15px;
   background-color: #b05653;
+  border-radius: 5px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
+#newfoundland-time {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  background-color: #934645;
   border-radius: 5px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;

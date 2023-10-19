@@ -39,6 +39,16 @@ function updateTime() {
     .tz("America/Halifax")
     .format("hh:mm:ss A");
 
+  let newfoundlandDateElement = document.querySelector("#newfoundland-date");
+  newfoundlandDateElement.innerHTML = moment()
+    .tz("America/St_Johns")
+    .format("ddd MMM Do YYYY");
+
+  let newfoundlandTimeElement = document.querySelector("#newfoundland-time");
+  newfoundlandTimeElement.innerHTML = moment()
+    .tz("America/St_Johns")
+    .format("hh:mm:ss A");
+
   let romeDateElement = document.querySelector("#rome-date");
   romeDateElement.innerHTML = moment()
     .tz("Europe/Rome")
