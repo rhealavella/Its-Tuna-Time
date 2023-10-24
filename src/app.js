@@ -69,23 +69,59 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-function getCurrentTemp(city) {
-  let key = "e9ebt40ac8468b03ff07a7b93c22oc3b";
-  let units = "metric";
-  let query = city; // Use the parameter 'city' instead of hardcoding the city name
-  let url = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${key}`;
+const apiKey = "e9ebt40ac8468b03ff07a7b93c22oc3b";
 
-  axios.get(url).then(displayTemp);
-}
+// Array of cities for which you want to fetch weather data
+const cities = [
+  "Vancouver",
+  "Calgary",
+  "Toronto",
+  "Halifax",
+  "St.Johns",
+  "Rome",
+  "Tokyo",
+];
 
-function displayTemp(response) {
-  console.log(response.data);
-  let temperatureElement = document.querySelector("#vancouver-temperature");
-  let iconElement = document.querySelector("#vancouver-icon");
-  iconElement.setAttribute("src", response.data.condition.icon_url); // Corrected the string concatenation syntax
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-}
+// Define the API endpoint
+const baseUrl = "https://api.shecodes.io/weather/v1/current";
 
-let query = "";
+// Function to fetch weather data for a city and display it in a specific spot on the webpage
+const fetchAndDisplayWeather = async (city, elementId) => {
+  try {
+    const url = `${baseUrl}?query=${city}&key=${apiKey}&units=metric`;
+    const response = await fetch(url);
 
-getCurrentTemp(query); // Pass the query parameter when calling the function
+    if (response.ok) {
+      const data = await response.json();
+
+      // Find the HTML element with the specified class name
+      const targetElement = document.querySelector(`.${elementId}`);
+
+      if (targetElement) {
+        // Create a new HTML element to display the weather information
+        const weatherInfo = document.createElement("p");
+        weatherInfo.textContent = `${Math.round(data.temperature.current)}°C`;
+
+        // Append the new element to the target element
+        targetElement.appendChild(weatherInfo);
+      } else {
+        console.error(
+          `Target element with class name '${elementId}' not found.`
+        );
+      }
+    } else {
+      console.error(`Failed to fetch weather data for ${city}`);
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+// Loop through the cities and fetch weather data, specifying the target element for each city
+fetchAndDisplayWeather("Vancouver", "vancouver-weather");
+fetchAndDisplayWeather("Calgary", "calgary-weather");
+fetchAndDisplayWeather("Toronto", "toronto-weather");
+fetchAndDisplayWeather("Halifax", "halifax-weather");
+fetchAndDisplayWeather("St.Johns", "st-johns-weather");
+fetchAndDisplayWeather("Rome", "rome-weather");
+fetchAndDisplayWeather("Tokyo", "tokyo-weather");
